@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Order now!</title>
+  <script>
+    $('.datepicker').pickadate();
+  </script>
+  <style>
+    .order-form .container {
+      color: #4c4c4c;
+      padding: 20px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    }
+    .order-form-label {
+      margin: 8px 0 0 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .order-form-input {
+      width: 100%;
+      padding: 8px 8px;
+      border-width: 1px !important;
+      border-style: solid !important;
+      border-radius: 3px !important;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.2em;
+      background-color: transparent;
+      border-color: #cccccc;
+    }
+    .btn-submit:hover {
+      background-color: #090909 !important;
+    }
+  </style>
+</head>
+<body>
+  <form action="http://localhost:3000/sign_up" method="post">
+  <section class="order-form my-4 mx-4">
+    <div class="container pt-4">
+
+      <div class="row">
+        <div class="col-12">
+          <h2>Please enter your details</h2>
+          <span>to place order</span>
+          <hr class="mt-1">
+        </div>
+        <div class="col-12">
+
+          <div class="row mx-4">
+            <div class="col-12 mb-2">
+              <label class="order-form-label">Name</label>
+            </div>
+            <div class="col-12 col-sm-6">
+              <input class="order-form-input" placeholder="First name" name="first" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 mt-sm-0">
+              <input class="order-form-input" placeholder="Last name" name="last" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">Contact number</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input" placeholder="+0123456789" name="contact" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">Type of payment you need to pay</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input" placeholder="Cash on delivery/gpay" name="pay" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label" for="date-picker-example">Date</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input datepicker" placeholder="Selected date" type="date"
+                id="date-picker-example" name="date" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">Address</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input" placeholder="Street Address" name="address1" required>
+            </div>
+            <div class="col-12 mt-2">
+              <input class="order-form-input" placeholder="Street Address Line 2" name="address2">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
+              <input class="order-form-input" placeholder="City" name="city" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pl-sm-0">
+              <input class="order-form-input" placeholder="Region" name="region" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
+              <input class="order-form-input" placeholder="Postal / Zip Code" name="zip" required>
+            </div>
+            <div class="col-12 col-sm-6 mt-2 pl-sm-0">
+              <input class="order-form-input" placeholder="Country" name="country" required>
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="validation" id="validation" value="1" required>
+                <label for="validation" class="form-check-label">I am not a robot</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <a><button type="submit" id="btnSubmit" class="btn btn-dark d-block mx-auto btn-submit">Submit</button>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section></form>
+</body>
+</html>
